@@ -1,31 +1,49 @@
 import axios from 'axios';
-import _ from 'lodash';
+// import _ from 'lodash';
 
 export default function fireAjax(method, URL, data, api) {
-  console.log("In Function",sessionStorage.getItem('token'));
   
-
-    if (method === 'POST') {
-      console.log("in IF part");
-
-      let config = {
-        headers: {
-          'Content-Type': 'application/json',
-          'x-auth-token': sessionStorage.getItem('token')
-        }
+  
+  if (method === 'POST') {
+    
+    let config = {
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': sessionStorage.getItem('token')
       }
-      console.log("axios")
+    }
       return axios.post(encodeURI(URL), data, config);
     } else if(method === 'GET') {
-      console.log("in else part");
       
       let config = {
         headers: {
           "Content-Type": "application/json",
-          'x-auth-token': `${sessionStorage.getItem('token')}`
+          'Authorization': sessionStorage.getItem('token'),          
         }
       }
       
       return axios.get(encodeURI(URL), config);
+    }
+    else if(method === 'PATCH') {
+      
+      let config = {
+        headers: {
+          "Content-Type": "application/json",
+          'Authorization': sessionStorage.getItem('token'),          
+        }
+      }
+      
+      return axios.patch(encodeURI(URL), data,config);
+    }
+    else if(method === 'DELETE') {
+      
+      let config = {
+        headers: {
+          "Content-Type": "application/json",
+          'Authorization': sessionStorage.getItem('token'),          
+        }
+      }
+      
+      return axios.delete(encodeURI(URL),config);
     }
  }

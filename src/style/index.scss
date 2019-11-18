@@ -1,0 +1,180 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+.menu{
+  h1{
+    display: inline-block;
+    margin-right: 20px;
+    font-size: 20px;
+    cursor: pointer;
+    user-select: none;
+  }
+}
+.my-spinner {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-Color: #fff;
+  opacity: 0.7;
+  text-align: center;
+  .bgBlur{
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    background-color: #fff;
+    opacity: .7;
+  }
+  .loaderMain{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+
+  }
+}
+
+.modalBg{
+  background: #fff;
+
+  padding: 16px 32px 24px;
+  box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2), 0px 5px 8px 0px rgba(0,0,0,0.14), 0px 1px 14px 0px rgba(0,0,0,0.12);
+}
+.modalMain{
+  display: flex;
+  align-items : center;
+  justify-content: center;
+}
+
+
+.loginMain{
+  height: 100%;
+}
+.loginMain .loginForm{
+  width: 30%;
+  height: 100%;
+  display: inline-block;
+  // background:#000;
+}
+.loginForm{
+  text-align: center;
+  box-shadow: 0 12px 22px 12px rgba(234, 234, 234, 0.5);
+  border-radius: 20px 0px 0px 20px;
+}
+.loginForm i{
+  font-size: 73px;
+  color: #6f6969;
+  display: block;
+}
+.loginForm span{
+  display: block;
+  margin-top: 20px;
+}
+.formContent h2{
+  font-family: montserrat;
+  font-weight: 400;
+}
+.formContent button{
+  background: linear-gradient(to right, #2269d4, #7932d6);
+  outline: none;
+  width: 8.5rem;
+  height: 2.6rem;
+  margin-top: 5rem;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 13px;
+  font-family: montserrat;
+  border: 0;
+}
+.loginForm input{
+  display: block;
+  margin: auto;
+  font-family: montserrat;
+  margin-top: 30px;
+  height: 2.5rem;
+  width: 77%;
+  margin-top: 5rem;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #7932d6;
+  text-indent:10px;
+  color: #4a4a4a
+  // font-family: 'Montserrat', sans-serif;
+}
+.loginForm input:focus{
+  outline:none;
+}
+.loginRight{
+  width:70%;
+  display: inline-block;
+  height: 100%;
+  vertical-align: top;
+  text-align: center;
+  height: 100%;
+  border-radius: 0px 20px 20px 0px;
+  background: linear-gradient(to left, #2289d4, #7932d6);
+}
+.loginRight .rightContent{
+  margin-top: 15em;
+  color: #d8baba;
+}
+.signUpMain .loginMain .loginForm{
+  background: linear-gradient(to left, #2289d4, #5832d6);
+}
+.signUpMain .loginRight{
+  background:#fff; 
+}
+.signUpMain .loginForm .rightContent{
+  margin-top:20rem;
+  color: #c1c1c1;
+}
+.signUpMain input{
+  text-indent: 10px;
+  height: 2.5rem;
+  width: 43%;
+  margin-top: 3rem !important;
+  border: none;
+  border-radius: 0px;
+  border-bottom: 1px solid #7932d6;
+  display: block;
+  margin: auto;
+  font-size: 13px;
+}
+.signUpMain input[type=checkbox]{
+  display: inline-block;
+  width:auto;
+}
+.signUpMain input:focus{
+  outline: none;
+}
+.signUpMain button{
+  display: block;
+  text-align:center;
+  margin: auto;
+  margin-top: 30px;
+}
+.signUpMain .haveAccount a{
+  line-height: 4px;
+}
+.signUpMain .haveAccount{
+  line-height: 40px;
+}
+
+
+body{
+  font-family:montserrat;
+}
+.height100vh{
+  height:100vh;
+}

@@ -23,7 +23,6 @@ export default function dataReducer(state = initialState , action){
                 }
             }
             case constant.LOGIN_SUCCESS :
-            console.log("action.payload.login" ,action.payload)
             return{
                 ...state,
                 login : {
@@ -43,6 +42,15 @@ export default function dataReducer(state = initialState , action){
                     success: false,
                     loading: false,
                     message: action.payload
+                }
+            }
+            case constant.LOGIN_CLEAR:
+            return{
+                ...state,
+                login :{
+                    error: false,
+                    success: false,
+                    loading: false,
                 }
             }
             default : return state

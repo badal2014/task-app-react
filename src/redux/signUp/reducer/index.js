@@ -14,7 +14,7 @@ export default function signUpReducer(state = initialState , action){
         case constant.SIGNUP_START:
             return{
                 ...state,
-                login:{
+                signUp:{
                     data : [],
                     error:false,
                     loading:true,
@@ -23,10 +23,9 @@ export default function signUpReducer(state = initialState , action){
                 }
             }
             case constant.SIGNUP_SUCCESS :
-            console.log("action.payload.login" ,action.payload)
             return{
                 ...state,
-                login : {
+                signUp : {
                     data : action.payload,
                     error: false,
                     success: true,
@@ -37,12 +36,21 @@ export default function signUpReducer(state = initialState , action){
             case constant.SIGNUP_ERROR :
             return{
                 ...state,
-                login :{
+                signUp :{
                     data: [],
                     error: true,
                     success: false,
                     loading: false,
                     message: action.payload
+                }
+            }
+            case constant.SIGNUP_CLEAR:
+            return{
+                ...state,
+                signUp :{
+                    error: false,
+                    success: false,
+                    loading: false,
                 }
             }
             default : return state
